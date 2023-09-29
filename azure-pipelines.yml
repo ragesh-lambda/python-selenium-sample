@@ -29,5 +29,5 @@ steps:
     python lambdatest.py
 
 - script: |
-    python lambdatest.py
+    python3 lambdatest.py
   
