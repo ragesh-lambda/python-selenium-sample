@@ -13,21 +13,20 @@ class FirstSampleTest(unittest.TestCase):
     # Generate capabilites from here: https://www.lambdatest.com/capabilities-generator/
     # setUp runs before each test case and
     def setUp(self):
-        desired_caps = {
-            'LT:Options': {
-                "build": "Python Demo",  # Change your build name here
-                "name": "Python Demo Test",  # Change your test name here
-                "platformName": "Windows 11",
-                "selenium_version": "4.0.0",
-                "console": 'true',  # Enable or disable console logs
-                "network": 'true',  # Enable or disable network logs
-                #Enable Smart UI Project
-                #"smartUI.project": "<Project Name>"
-            },
-            "browserName": "firefox",
-            "browserVersion": "latest",
-        }
-
+           capability={
+            "single_test": {
+                "browserName": "Chrome",
+                "browserVersion": "118.0",
+                "LT:Options": {
+                    "username": "rageshn",
+                    "accessKey": "902OMaGaDsNUiTYVS73bU3I8X8Wld6D014LSeUog83xx6bF386",
+                    "platformName": "Windows 10",
+                    "project": "Untitled",
+                    "w3c": True,
+                    "plugin": "python-pytest"
+                }
+            }
+            }
         # Steps to run Smart UI project (https://beta-smartui.lambdatest.com/)
         # Step - 1 : Change the hub URL to @beta-smartui-hub.lambdatest.com/wd/hub
         # Step - 2 : Add "smartUI.project": "<Project Name>" as a capability above
@@ -37,7 +36,7 @@ class FirstSampleTest(unittest.TestCase):
         self.driver = webdriver.Remote(
             command_executor="http://{}:{}@hub.lambdatest.com/wd/hub".format(
                 username, access_key),
-            desired_capabilities=desired_caps)
+            desired_capabilities=capability)
 
 # tearDown runs after each test case
 
