@@ -26,5 +26,8 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pytest lambdatest.py
-  displayName: 'pytest'
+    python lambdatest.py
+
+- script: |
+    python lambdatest.py
+  
