@@ -5,8 +5,8 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-username = os.getenv("LT_USERNAME")  # Replace the username
-access_key = os.getenv("LT_ACCESS_KEY")  # Replace the access key
+username = "rageshn"  # Replace the username
+access_key = "902OMaGaDsNUiTYVS73bU3I8X8Wld6D014LSeUog83xx6bF386"  # Replace the access key
 
 
 class FirstSampleTest(unittest.TestCase):
